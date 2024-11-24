@@ -1,0 +1,42 @@
+Задача
+https://www.hackerrank.com/challenges/plus-minus/problem
+
+#include <iostream>
+#include <vector>
+#include <iomanip> // Для контролю за точністю виводу
+using namespace std;
+
+int main() {
+    int n;
+    
+    // Введення розміру масиву
+    cin >> n;
+    
+    vector<int> arr(n);
+
+    // Введення елементів масиву
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int positive = 0, negative = 0, zero = 0;
+
+    // Підрахунок додатних, від'ємних та нульових елементів
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > 0) {
+            positive++;
+        } else if (arr[i] < 0) {
+            negative++;
+        } else {
+            zero++;
+        }
+    }
+
+    // Обчислення відношень та виведення результату з точністю до 6 знаків
+    cout << fixed << setprecision(6); // Встановлюємо точність
+    cout << (double)positive / n << endl; // Відношення додатних
+    cout << (double)negative / n << endl; // Відношення від'ємних
+    cout << (double)zero / n << endl;    // Відношення нульових
+
+    return 0;
+}
