@@ -1,3 +1,6 @@
+Задача
+https://hackerrank.com/challenges/compare-the-triplets/problem
+
 #include <iostream>
 #include <vector>
 using namespace std;
