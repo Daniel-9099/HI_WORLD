@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Функція для порівняння оцінок
+vector<int> compareTriplets(vector<int> a, vector<int> b) {
+    int aliceScore = 0;
+    int bobScore = 0;
+
+    for (int i = 0; i < 3; i++) {
+        if (a[i] > b[i]) {
+            aliceScore++; // Аліса отримує бал
+        } else if (a[i] < b[i]) {
+            bobScore++; // Боб отримує бал
+        }
+    }
+
+    return {aliceScore, bobScore};
+}
+
+int main() {
+    vector<int> a(3), b(3);
+
+    // Введення оцінок Аліси
+    cout << "Введіть оцінки Аліси (три числа): ";
+    for (int i = 0; i < 3; i++) {
+        cin >> a[i];
+    }
+
+    // Введення оцінок Боба
+    cout << "Введіть оцінки Боба (три числа): ";
+    for (int i = 0; i < 3; i++) {
+        cin >> b[i];
+    }
+
+    // Порівняння оцінок
+    vector<int> result = compareTriplets(a, b);
+
+    // Виведення результату
+    cout << "Результати: " << result[0] << " " << result[1] << endl;
+
+    return 0;
+}
