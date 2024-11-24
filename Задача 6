@@ -1,0 +1,31 @@
+Задача
+https://www.hackerrank.com/challenges/staircase/problem
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    // Введення кількості рядків для сходів
+    cout << "Введіть кількість рядків для сходів: ";
+    cin >> n;
+
+    // Генерація сходів
+    for (int i = 1; i <= n; i++) {
+        // Виведення пробілів
+        for (int j = 0; j < n - i; j++) {
+            cout << " ";
+        }
+        
+        // Виведення символів '#'
+        for (int j = 0; j < i; j++) {
+            cout << "#";
+        }
+
+        // Перехід на новий рядок після кожного рівня сходів
+        cout << endl;
+    }
+
+    return 0;
+}
