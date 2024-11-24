@@ -1,0 +1,27 @@
+Задача
+https://www.hackerrank.com/challenges/a-very-big-sum/problem
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    
+    // Зчитуємо розмір масиву
+    cin >> n;
+
+    vector<long long> arr(n); // Використовуємо long long для великих чисел
+    long long sum = 0;
+
+    // Зчитуємо елементи масиву та обчислюємо їх суму
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        sum += arr[i]; // Додаємо елемент до суми
+    }
+
+    // Виводимо результат
+    cout << sum << endl;
+
+    return 0;
+}
